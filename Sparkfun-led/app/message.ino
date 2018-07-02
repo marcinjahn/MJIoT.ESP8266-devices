@@ -7,7 +7,7 @@ bool createMessage(char *payload)
     
     root["DeviceId"] = DEVICE_ID;
     root["PropertyName"] = "LED state";
-    root["Value"] = digitalRead(LED_PIN) ? "false" : "true";
+    root["PropertyValue"] = digitalRead(LED_PIN) ? "false" : "true";
 
     root.printTo(payload, MESSAGE_MAX_LEN);
 }
