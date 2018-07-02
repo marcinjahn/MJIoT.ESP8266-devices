@@ -98,7 +98,7 @@ IOTHUBMESSAGE_DISPOSITION_RESULT receiveMessageCallback(IOTHUB_MESSAGE_HANDLE me
         //temp[size] = '\0';
         StaticJsonBuffer<200> jsonBuffer;
         JsonObject& json = jsonBuffer.parseObject(temp);
-        const char* charValue = json["Value"];
+        const char* charValue = json["PropertyValue"];
         String value = String(charValue);
 
         DoAction(value);

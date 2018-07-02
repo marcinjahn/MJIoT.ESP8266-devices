@@ -7,7 +7,7 @@ bool createMessage(char *payload)
     
     root["DeviceId"] = DEVICE_ID;
     root["PropertyName"] = "Switch state";
-    root["Value"] = digitalRead(buttonPin) ? "true" : "false";
+    root["PropertyValue"] = digitalRead(buttonPin) ? "true" : "false";
 
     root.printTo(payload, MESSAGE_MAX_LEN);
 }
