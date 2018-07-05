@@ -32,7 +32,7 @@ void setupDevice() {
     delay(4000);
     //initializeWifiCredentials();
 
-    ssid = "Redmi 4X";
+    ssid = "Redmi4X";
     pass = "homologacja";
     connectionString = "HostName=MJIoT-Hub.azure-devices.net;DeviceId=17;SharedAccessKey=8APBhjwFBUc6hH2s0rbL8Q+AiUJOzAkeWcnK4gdZYSE=";
 
@@ -104,7 +104,7 @@ void setup()
     }
 
     //IoTHubClient_LL_SetMessageCallback(iotHubClientHandle, receiveMessageCallback, NULL);
-//    IoTHubClient_LL_SetDeviceMethodCallback(iotHubClientHandle, deviceMethodCallback, NULL);
+    IoTHubClient_LL_SetDeviceMethodCallback(iotHubClientHandle, deviceMethodCallback, NULL);
 //    IoTHubClient_LL_SetDeviceTwinCallback(iotHubClientHandle, twinCallback, NULL);
 }
 

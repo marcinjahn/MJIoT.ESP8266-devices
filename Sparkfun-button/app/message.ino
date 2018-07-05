@@ -6,7 +6,7 @@ bool createMessage(char *payload)
     JsonObject &root = jsonBuffer.createObject();
     
     root["DeviceId"] = DEVICE_ID;
-    root["PropertyName"] = "Switch state";
+    root["PropertyName"] = "Switch State";
     root["PropertyValue"] = digitalRead(buttonPin) ? "true" : "false";
 
     root.printTo(payload, MESSAGE_MAX_LEN);
