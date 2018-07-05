@@ -1,7 +1,7 @@
 static WiFiClientSecure sslClient; // for ESP8266
 #include <ArduinoJson.h>
 
-const char *onSuccess = "\"Successfully invoke device method\"";
+const char *onSuccess = "\"online\"";
 const char *notFound = "\"No method found\"";
 
 
@@ -114,7 +114,7 @@ IOTHUBMESSAGE_DISPOSITION_RESULT receiveMessageCallback(IOTHUB_MESSAGE_HANDLE me
 int deviceMethodCallback(const char *methodName, const unsigned char *payload, size_t size, unsigned char **response, size_t *response_size, void *userContextCallback)
 {
     Serial.printf("Try to invoke method %s.\r\n", methodName);
-    const char *responseMessage = "";
+    const char *responseMessage = onSuccess;
     int result = 200;
 
 //    if (strcmp(methodName, "start") == 0)
