@@ -16,7 +16,7 @@
 static bool messagePending = false;
 static bool messageSending = true;
 
-int temperatureInterval = 2000;
+int temperatureInterval = 5000;
 int humidityInterval = 2000;
 
 static char *connectionString;
@@ -129,7 +129,7 @@ void loop()
     if (humidityCounter >= humidityInterval)
     {
       humidityCounter = 0;
-      SendHumidityToCloud();
+      //SendHumidityToCloud();
     }
     
 }

@@ -1,5 +1,5 @@
 // Physical device information for board and sensor
-#define DEVICE_ID "16"
+#define DEVICE_ID "44"
 
 // Pin layout configuration
 #define LED_PIN 5
