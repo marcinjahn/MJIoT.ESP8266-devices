@@ -5,3 +5,5 @@ This repository contains ESP8266 projects for MJIoT platform.
 - LED device
 - Button device
 - LED + Potentiometer device
+- Relay (Heater)
+- GateBot
